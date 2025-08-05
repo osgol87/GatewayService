@@ -39,7 +39,7 @@ eureka:
 management:
   endpoint:
     gateway:
-      enabled: ${GATEWAY_ROUTE_TABLES_ENABLED:true}
+      enabled: true
   endpoints:
     web:
       exposure:
