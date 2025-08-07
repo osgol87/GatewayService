@@ -12,13 +12,11 @@ spring:
             locator:
               enabled: true
               lower-case-service-id: true
-      default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
       globalcors:
-        cors-configuration:
+        cors-configurations:
           '[/**]':
-            allowedOrigins: ${ALLOWED_ORIGINS:*}
-            allowedHeaders: "*"
+            allowedOrigins: '*'
+            allowedHeaders: '*'
             allowedMethods:
               - GET
               - POST
@@ -43,4 +41,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: gateway
